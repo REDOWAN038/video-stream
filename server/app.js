@@ -36,6 +36,8 @@ app.get("/video", (req, res) => {
         "Content-Length": contentLength,
         "Content-Type": "video/mp4"
     }
+
+    res.writeHead(206, header)
 })
 
 app.listen(3000, () => {
